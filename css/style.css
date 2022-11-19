@@ -1,0 +1,18 @@
+@import "_normalize.css";
+@import "_fonts.css";
+@import "_variables.css";
+@import "_vendor.css";
+@import "_global.css";
+@import "_overall.css";
+
+/* components imports */
+@import url(./components/_header.css);
+@import url(./components/_first.css);
+@import url(./components/_become.css);
+@import url(./components/_featured.css);
+@import url(./components/_slider.css);
+@import url(./components/_newsletter.css);
+@import url(./components/_insp.css);
+@import url(./components/_footer.css);
+
+@import "_media.css";
