@@ -15,7 +15,7 @@ $mail->CharSet = 'UTF-8';
 // $mail->isSMTP();
 // $mail->SMTPAuth = true;
 // $mail->SMTPDebug = 0;
- 
+
 // $mail->Host = 'ssl://smtp.gmail.com';
 // $mail->Port = 465;
 // $mail->Username = 'Логин';
@@ -48,14 +48,14 @@ $message = "<table style='width: 50%;'>$message</table>";
 
 // От кого
 $mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'Your best site');
- 
+
 // Кому
 foreach ( $admin_email as $key => $value ) {
 	$mail->addAddress($value);
 }
 // Тема письма
 $mail->Subject = $form_subject;
- 
+
 // Тело письма
 $body = $message;
 // $mail->isHTML(true);  это если прям верстка
