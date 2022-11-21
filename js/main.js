@@ -3,6 +3,7 @@ const swiper1 = document.querySelector('.slider-container'),
 			burger = document.querySelector('.burger'),
 			close = document.querySelector('.menu__close'),
 			menu = document.querySelector('.menu'),
+      menuLink = document.querySelectorAll ('.menu__link')
 			playButtonsFirst = document.querySelectorAll('.main-slider__play ');
 
 let swiperSlider1 = new Swiper(swiper1, {
@@ -39,13 +40,23 @@ swiperSlider2.on('transitionEnd', function () {
 	});
 });
 
-burger.addEventListener('click', () => {
+
+burger.addEventListener('click',  () => {
 	menu.classList.add('menu--visible');
 });
 
 close.addEventListener('click', () => {
 	menu.classList.remove('menu--visible');
 });
+
+menuLink.forEach (button => {
+  button.addEventListener('click', () => {
+    menu.classList.remove('menu--visible')
+  })
+})
+
+
+
 
 playButtonsFirst.forEach((el) => {
 	el.addEventListener('click', (e) => {
