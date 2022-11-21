@@ -11,6 +11,10 @@ $form_subject = trim($_POST["form_subject"]);
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 
+$name = $_POST["name"];
+$email = $_POST["email"];
+$tel = $_POST["tel"];
+
 // Настройки SMTP
 // $mail->isSMTP();
 // $mail->SMTPAuth = true;
